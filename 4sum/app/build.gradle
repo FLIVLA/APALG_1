@@ -32,11 +32,11 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'threesum.ThreeSum'
+    mainClass = 'foursum.FourSum'
 }
 
 jar {
     manifest {
-        attributes 'Main-Class': 'threesum.ThreeSum'
+        attributes 'Main-Class': 'foursum.FourSum'
     }
 }
