@@ -42,7 +42,10 @@ public class FourSum {
                     int d = y[rp];
                     if (a + b + c + d == 0) {
                         return new int[] { a, b, c, d };
-                    } else {
+                    } else if (a + b + c + d < 0) {
+                        ++lp;
+                    }
+                     else {
                         --rp;
                     }
                 }
@@ -56,8 +59,9 @@ public class FourSum {
         var H = new HashMap<Integer, int[]>();
         for (int i = 0; i < n; ++i) {
             for (int j = i + 1; j < n; ++j) {
-                var tuple = new int[] { i, j };
-                H.put(x[i] + x[j], tuple);
+                int sum = x[i] + x[j];
+                var indices = new int[] { i, j };
+                H.put(sum, indices);
             }
         }
 
@@ -66,7 +70,7 @@ public class FourSum {
             for (int j = i + 1; j < n; ++j) {
                 int b = x[j];
                 int[] kl = H.get(-a - b);
-                if ((kl[0] != 0 && kl[1] != 0) && j < kl[0]) {
+                if (kl != null && j < kl[0]) {
                     int c = x[kl[0]];
                     int d = x[kl[1]];
                     return new int[] { a, b, c, d }; 
@@ -76,7 +80,7 @@ public class FourSum {
         return null;
     }
 
-        public static int[] readInput() {
+    public static int[] readInput() {
         Scanner s = new Scanner(System.in);
         int[] x = null;
         try {

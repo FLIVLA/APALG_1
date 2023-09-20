@@ -72,6 +72,27 @@ public class ThreeSum {
         return null;
     }
 
+    // public static int[] threeSum_HashMap_NoCheck(int[] x) {
+    //     int n = x.length;
+    //     var H = new HashMap<Integer, Integer>();
+    //     for (int i = 0; i < n; ++i) {
+    //         H.put(x[i], i);
+    //     }
+
+    //     for (int i = 0; i < n; ++i) {
+    //         int a = x[i];
+    //         for (int j = i + 1; j < n; ++j) {
+    //             int b = x[j];
+    //             int c = -a - b;
+    //             Integer k = H.get(c);
+    //             if (k != null) {
+    //                 return new int[] { a, b, c };
+    //             }
+    //         }
+    //     }
+    //     return null;
+    // }
+
     public static int[] readInput() {
         Scanner s = new Scanner(System.in);
         int[] x = null;

@@ -4,8 +4,8 @@ import Benchmarks
 
 
 INSTANCES: List[Tuple[str,str]] = [
+    ('quartic', '../4sum/app/build/libs/app.jar'),
     ('cubic', '../4sum/app/build/libs/app.jar'),
-    ('quadratic', '../4sum/app/build/libs/app.jar'),
     ('hashmap', '../4sum/app/build/libs/app.jar')
 ]
 

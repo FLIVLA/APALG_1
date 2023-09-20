@@ -70,8 +70,8 @@ if __name__ == '__main__':
     for algorithm in raw_results:
         refined_results[algorithm] = \
             compute_mean_std(raw_results[algorithm])
-    write_latex_tabular(refined_results['cubic'], './results/quartic_table.tex')
-    write_latex_tabular(refined_results['quadratic'], './results/cubic_table.tex')
+    write_latex_tabular(refined_results['quartic'], './results/quartic_table.tex')
+    write_latex_tabular(refined_results['cubic'], './results/cubic_table.tex')
     write_latex_tabular(refined_results['hashmap'], './results/hashmap_table.tex')
     
     plot_filename = './results/plot.png'
